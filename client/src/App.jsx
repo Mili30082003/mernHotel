@@ -1,15 +1,25 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Home from '/src/pages/home/Home'; 
+import List from '/src/pages/list/List';
+import Hotel from '../src/pages/hotel/Hotel';
+
+
+import {
+      BrowserRouter, 
+      Routes,
+      Route,
+} from  "react-router-dom";
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    
-    </>
+        <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home></Home>}/>
+          <Route path="/hotels" element={<List></List>}/>
+          <Route path="/hotels/:id" element={<Hotel></Hotel>}/>
+        </Routes>
+        </BrowserRouter>
   )
 }
 
