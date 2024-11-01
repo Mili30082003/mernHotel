@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Home from '/src/pages/home/Home'; 
 import List from '/src/pages/list/List';
 import Hotel from '../src/pages/hotel/Hotel';
+import './index.css'
+
 
 
 import {
